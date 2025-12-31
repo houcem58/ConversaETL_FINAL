@@ -1,0 +1,12 @@
+﻿.env
+*.key
+__pycache__/
+*.pyc
+venv/
+*.db
+chroma_db/
+lora_model/
+outputs/
+*.log
+.vscode/
+.DS_Store

@@ -1,0 +1,7 @@
+﻿[
+  {
+    "instruction": "Load CSV, clean emails, save to database",
+    "input": "customers.csv",
+    "output": "import pandas as pd\nfrom sqlalchemy import create_engine\ndf = pd.read_csv('customers.csv')\ndf['email'] = df['email'].str.lower()\nengine = create_engine('postgresql://localhost/db')\ndf.to_sql('customers', engine, if_exists='replace')"
+  }
+]
